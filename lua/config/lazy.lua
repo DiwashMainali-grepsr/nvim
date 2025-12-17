@@ -21,21 +21,6 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
   },
-  {
-    "bluz71/vim-moonfly-colors",
-    lazy = false, -- load at startup so it's available to other plugins
-    priority = 1000, -- higher priority so colorscheme is applied early
-    config = function()
-      -- (optional) set any moonfly-specific globals before applying
-      -- e.g. vim.g.moonflyTerminalColors = 1
-
-      -- choose background if desired
-      -- vim.o.background = "dark"
-
-      -- apply the colorscheme
-      vim.cmd("colorscheme moonfly")
-    end,
-  },
 
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -46,7 +31,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "moonfly", "tokyonight", "habamax" } },
+  install = { colorscheme = { "rose-pine", "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
